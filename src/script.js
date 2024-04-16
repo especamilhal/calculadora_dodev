@@ -3,6 +3,45 @@
 
 //ESCREVA SEU CÓDIGO AQUI!!
 
+function Calculadora(num1, num2, operador) {
+  let resultado;
+  num1 = parseInt(num1);
+  num2 = parseInt(num2);
+
+  switch (operador) {
+    case "+":
+      resultado = num1 + num2;
+      break;
+
+    case "-":
+      resultado = num1 - num2;
+      break;
+
+    case "/":
+      resultado = num1 / num2;
+      break;
+
+    case "*":
+      resultado = num1 * num2;
+      break;
+
+    case "e":
+      resultado = 1;
+            for (let i = 0; i < num2; i++) {
+                resultado *= num1
+      }
+  
+    default:
+      break;
+  }
+
+  if (resultado === undefined || resultado > 1000000) {
+    resultado = "ERRO"
+  }
+  
+  return resultado;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
